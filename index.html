@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Fullscreen Autoplay</title>
+    <title>Video Auto-play Fullscreen</title>
     <style>
         * {
             margin: 0;
@@ -18,27 +18,36 @@
             background: #000;
         }
         
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+        
         iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(1.5);
-            width: 100vw;
-            height: 100vh;
+            transform: translate(-50%, -50%) scale(1.2);
+            width: 100%;
+            height: 100%;
             border: none;
             pointer-events: none;
-        }
-        
-        body {
-            overflow: hidden;
         }
     </style>
 </head>
 <body>
     <iframe 
-        src="https://www.youtube.com/embed/MZQz4mf2Q8g?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=MZQz4mf2Q8g&disablekb=1&fs=0&iv_load_policy=3" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
+        src="https://streamable.com/e/vreawh?autoplay=1&nocontrols=1&muted=1" 
+        allow="autoplay; fullscreen" 
+        allowfullscreen
+        frameborder="0">
     </iframe>
 </body>
 </html>
